@@ -2,7 +2,10 @@
     padding:0;
     margin:0;
     text-decoration: none;
+    overflow: hidden;
 }
+
+/* HEADER */
 
 header {
     width: 100%;
@@ -19,32 +22,54 @@ header .logo {
     top: 20px;
 }
 
+/* RIGHT PANEl */
 
 header nav {
-    display: flex;
+    width: 100%;
     float: right;
-    position: absolute;
-    right: 40px;
-    top: 30px;
-    padding-left: 20px;
 }
 
-header nav ul li {
+header nav .btn {
+    font-size: 25px;
+    position: absolute;
+    top: 30px;
+    right: 3%;
+    cursor:pointer ;
+    transition: right 0.7s;
+}
+
+header nav .right-panel {
+    position: absolute;
+    display: flex;
+    top:30px;
+    right: -40%;
+    transition: right 0.7s;
+}
+
+
+header nav .right-panel li {
     font-size: 25px;
     display: inline-block;
     padding-left:10px;
     padding-right: 10px;
 }
 
-header nav .menu {
-    font-size: 25px;
-    padding-left: 50px;
+
+header nav .check:checked ~ .btn {
+    color: white;
+    right: 30%;
 }
 
-header nav .menu input {
+header nav .check:checked ~ .right-panel{
+   right:0;
+}
+
+header nav input {
     display: none;
 }
 
+
+/* CENTER */
 
 section {
     width: 100%;
@@ -81,9 +106,12 @@ section article input {
     padding: 10px;
     border-radius: 15px;
     border: none;
+    cursor: pointer;
     
 }
 
+
+/* FOOTER */
 
 footer {
     width: 100%;
