@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
 * {
     padding:0;
     margin:0;
     text-decoration: none;
     overflow: hidden;
+    font-family: 'Rubik', sans-serif;
 }
 
 html, body {
@@ -19,16 +22,24 @@ html, body {
 header {
     width: 100%;
     height: 90px;
-    /* background-color: burlywood; */
 }
 
 header .logo {
-    font-size: 30px;
     display: flex;
     float: left;
     position: absolute;
     left: 40px;
     top: 20px;
+}
+
+header .logo a img {
+    width: 60px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+header .logo a img:hover {
+    border-color: tomato;
 }
 
 /* RIGHT PANEl */
@@ -39,34 +50,42 @@ header nav {
 }
 
 header nav .btn {
-    font-size: 25px;
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 3%;
     cursor:pointer ;
     transition: right 0.7s;
+}
+
+header nav .btn img {
+    width: 50px;
+    height: 50px;
 }
 
 header nav .right-panel {
     position: absolute;
     display: flex;
     top:30px;
-    right: -40%;
+    right: -45%;
     transition: right 0.7s;
 }
 
 
 header nav .right-panel li {
+    height: auto;
     font-size: 25px;
     display: inline-block;
-    padding-left:20px;
-    padding-right: 20px;
+    padding: 0 20px;
+    
 }
 
+header nav .right-panel li a {
+    color: black;
+}
 
 header nav .check:checked ~ .btn {
     color: white;
-    right: 43%;
+    right: 45%;
 }
 
 header nav .check:checked ~ .right-panel{
@@ -78,8 +97,9 @@ header nav input {
 }
 
 header nav .right-panel li:hover {
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid tomato;
     padding-bottom: 5px;
+    
 }
 
 /* CENTER */
@@ -91,8 +111,7 @@ section {
 
 section article {
     width: 600px;
-    height: 300px;
-    /* background-color: thistle; */
+    height: 400px;
     position: relative;
     margin-top: 10%;
     margin-left: 23%;
@@ -112,17 +131,27 @@ section article h3 {
     font-size: 80px;
     padding-bottom: 20px;
 }
+section article h2 {
+    padding-top: 30px;
+}
 
 section article input {
+    font-weight: bold;
+    font-size: larger;
     margin-top: 40px;
-    width: 100px;
-    padding: 10px;
-    border-radius: 15px;
+    width: 150px;
+    padding: 20px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
+    background: tomato;
+    border: 3px solid black;
     
 }
 
+section article input:hover {
+    background: inherit;
+}
 
 /* FOOTER */
 
@@ -134,14 +163,32 @@ footer {
 
 footer ul {
     position:relative;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 23%;
+    margin-right: 20%;
 }
 
+footer ul li img {
+    width: 40px;
+    height: 40px;
+    background-color: tomato;
+    border-radius: 20px;
+}
 
 footer ul li {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 25px;
     display: inline-block;
+    text-align: center;
+}
+
+footer ul li a {
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+footer ul li a:hover {
+    color: tomato;
 }
